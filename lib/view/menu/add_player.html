@@ -1,0 +1,17 @@
+<paper-dialog id="menuAddPlayerDialog" modal="true">
+    <h2>Configuration\Add Player</h2>
+    <form is="iron-form" id="form" method="post" action="/form/handler">
+        <paper-input label="name" value="{{player.name}}"></paper-input>
+        <paper-dropdown-menu label="Dinosaurs">
+            <paper-listbox class="dropdown-content">
+                <paper-item>{{player.color}}</paper-item>
+            </paper-listbox>
+        </paper-dropdown-menu>
+    </form>
+    <div class="buttons">
+        <paper-button dialog-dismiss>
+            <iron-icon icon="close"></iron-icon>Cancel</paper-button>
+        <paper-button dialog-confirm>
+            <iron-icon icon="done"></iron-icon>Accept</paper-button>
+    </div>
+</paper-dialog>
